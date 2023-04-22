@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Martel+Sans:wght@200;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="principal">
+        <h2>Calculadora Simples</h2>
+
+        <div class="icone">
+            <i class='bx bxs-moon' id="icon"></i>
+        </div>
+        
+        <div class="calculadora">
+            <div class="visor">
+                <input type="text" id="tela" disabled>
+            </div>
+            <hr>
+            <div class="botoes">
+                <button id="btnC" value="C" onclick="tela.value ='' ">C</button>
+                <button class="btnOp" value="<" onclick="tela.value = tela.value.toString().slice(0, -1)"><</button>
+                <button class="btnOp" value="/" onclick="tela.value += '/'">/</button>
+                
+                <button class="btnOp" value="*" onclick="tela.value += '*'">X</button>
+                <button class="btnPad" value="7" onclick="tela.value += 7">7</button>
+                <button class="btnPad" value="8" onclick="tela.value += 8">8</button>
+                <button class="btnPad" value="9" onclick="tela.value += 9">9</button>
+                
+                <button class="btnOp" value="-" onclick="tela.value += '-'">-</button>
+                <button class="btnPad" value="4" onclick="tela.value += 4">4</button>
+                <button class="btnPad" value="5" onclick="tela.value += 5">5</button>
+                <button class="btnPad" value="6" onclick="tela.value += 6">6</button>
+                
+                <button class="btnOp" value="+" onclick="tela.value += '+'">+</button>
+                <button class="btnPad" value="1" onclick="tela.value += 1">1</button>
+                <button class="btnPad" value="2" onclick="tela.value += 2">2</button>
+                <button class="btnPad" value="3" onclick="tela.value += 3">3</button>
+
+                <div id="igual">
+                    <button id="btnIgual" value="=" onclick="tela.value = eval(tela.value)" >=</button>
+                </div>
+                
+                <div id="zero">
+                    <button class="btnPad" value="0" onclick="tela.value += 0">0</button>
+                </div>
+                <button class="btnPad" value="." onclick="tela.value += '.'">.</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
